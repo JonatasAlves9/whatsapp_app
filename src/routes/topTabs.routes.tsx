@@ -5,12 +5,14 @@ import ChatScreen from '../screens/chats';
 import StatusScreen from '../screens/status';
 import CameraScreen from '../screens/camera';
 import CallsScreen from '../screens/calls';
+import { Header } from '../components/Header';
 
 const Tab = createMaterialTopTabNavigator();
 
 export function TopTabs() {
   return (
     <>
+      <Header />
       <Tab.Navigator
         tabBarOptions={{
           style: {
