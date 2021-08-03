@@ -7,7 +7,7 @@ import CameraScreen from '../screens/camera';
 import CallsScreen from '../screens/calls';
 import { Header } from '../components/Header';
 
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, Ionicons } from '@expo/vector-icons';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -23,21 +23,26 @@ export function TopTabs() {
           activeTintColor: '#fff',
           inactiveTintColor: '#969CA1',
           labelStyle: {
-            fontSize: 11.3,
+            fontSize: 11,
+          },
+          showIcon: true,
+          iconStyle: {
+            width: 'auto',
+            height: 5,
           },
           indicatorStyle: {
             backgroundColor: '#fff',
           },
-          allowFontScaling: false,
+          allowFontScaling: true,
         }}
       >
         <Tab.Screen
-          name="Home"
+          name="C"
           component={CameraScreen}
           options={{
             tabBarLabel: '',
             tabBarIcon: () => (
-              <AntDesign name="search1" size={24} color="white" />
+              <Ionicons name="camera" size={24} color="white" />
             ),
           }}
         />
