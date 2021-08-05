@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Container } from './styles';
+import { AntDesign, Feather } from '@expo/vector-icons';
+import { Chat } from '../../components/Chat';
 
-export default function App() {
+export const ChatScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Chats</Text>
-    </View>
+    <Container>
+      <Chat />
+      <Chat />
+    </Container>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};

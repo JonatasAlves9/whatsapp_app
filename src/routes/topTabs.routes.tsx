@@ -1,7 +1,7 @@
 import React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-import ChatScreen from '../screens/chats';
+import { ChatScreen } from '../screens/chats';
 import StatusScreen from '../screens/status';
 import CameraScreen from '../screens/camera';
 import CallsScreen from '../screens/calls';
@@ -16,16 +16,37 @@ export function TopTabs() {
     <>
       <Header />
       <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color }) => {
+            let iconName;
+
+            if (route.name === 'C') {
+              iconName = focused
+                ? 'ios-information-circle'
+                : 'ios-information-circle-outline';
+              return <Ionicons name="camera" size={24} color="white" />;
+            } else if (route.name === 'Settings') {
+              iconName = focused ? 'ios-list-box' : 'ios-list';
+            }
+
+            // You can return any component that you like here!
+          },
+          tabBarActiveTintColor: 'tomato',
+          tabBarInactiveTintColor: 'gray',
+        })}
         tabBarOptions={{
           style: {
             backgroundColor: '#075E55',
           },
           activeTintColor: '#fff',
           inactiveTintColor: '#969CA1',
+          tabStyle: {},
           labelStyle: {
             fontSize: 11,
+            color: '#fff',
           },
           showIcon: true,
+
           iconStyle: {
             width: 'auto',
             height: 5,
@@ -41,9 +62,6 @@ export function TopTabs() {
           component={CameraScreen}
           options={{
             tabBarLabel: '',
-            tabBarIcon: () => (
-              <Ionicons name="camera" size={24} color="white" />
-            ),
           }}
         />
         <Tab.Screen name="Conversas" component={ChatScreen} />
