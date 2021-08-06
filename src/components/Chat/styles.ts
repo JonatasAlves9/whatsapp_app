@@ -29,6 +29,7 @@ export const TitleName = styled.Text`
 export const Message = styled.Text`
   font-size: 14px;
   color: #999;
+  margin-left: 5px;
 `;
 
 export const Time = styled.Text`
@@ -40,6 +41,11 @@ export const ViewCenter = styled.View`
   flex: 1;
   height: 100%;
   padding-horizontal: 10px;
+`;
+
+export const ViewMessage = styled.View`
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const ViewEnd = styled.View`

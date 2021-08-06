@@ -8,11 +8,28 @@ import {
   ViewEnd,
   Time,
   Button,
+  ViewMessage,
 } from './styles';
-import { AntDesign, Feather } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
 
-export const Chat = () => {
+type Props = {
+  title: string;
+  message: string;
+  time: string;
+  messageIsRead: boolean;
+  messageUser: boolean;
+  messageIsSend: boolean;
+};
+
+export const Chat = ({
+  title,
+  message,
+  time,
+  messageIsRead,
+  messageUser,
+  messageIsSend,
+}: Props) => {
   return (
     <Container>
       <Avatar
@@ -22,11 +39,23 @@ export const Chat = () => {
       />
       <Button>
         <ViewCenter>
-          <TitleName>Jônatas Alves</TitleName>
-          <Message>Deixa pra la</Message>
+          <TitleName>{title}</TitleName>
+          <ViewMessage>
+            {messageIsRead ? (
+              <Ionicons name={'checkmark-done'} size={20} color="#5FA8C9" />
+            ) : (
+              <Ionicons
+                name={messageIsSend ? 'checkmark-done' : 'checkmark-outline'}
+                size={20}
+                color="#999"
+              />
+            )}
+
+            <Message>{message}</Message>
+          </ViewMessage>
         </ViewCenter>
         <ViewEnd>
-          <Time>23:59</Time>
+          <Time>{time}</Time>
         </ViewEnd>
       </Button>
     </Container>
