@@ -20,6 +20,7 @@ type Props = {
   messageIsRead: boolean;
   messageUser: boolean;
   messageIsSend: boolean;
+  onPress: () => void;
 };
 
 export const Chat = ({
@@ -29,6 +30,7 @@ export const Chat = ({
   messageIsRead,
   messageUser,
   messageIsSend,
+  onPress,
 }: Props) => {
   return (
     <Container>
@@ -37,7 +39,7 @@ export const Chat = ({
           uri: 'http://s2.glbimg.com/0qzxjDYGdG3DA87NEvQtv3Xy_hqhwJt9YRvdwSPmw0pIoz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2013/08/19/oliver-peoples.jpg',
         }}
       />
-      <Button>
+      <Button onPress={onPress}>
         <ViewCenter>
           <TitleName>{title}</TitleName>
           <ViewMessage>

@@ -5,7 +5,21 @@ import { Chat } from '../../components/Chat';
 import { ScrollView } from 'react-native-gesture-handler';
 import { BottomButton } from '../../components/BottonButton';
 
-export const ChatScreen = () => {
+import {
+  NavigationParams,
+  NavigationScreenProp,
+  NavigationState,
+} from 'react-navigation';
+
+interface Props {
+  navigation: NavigationScreenProp<NavigationState, NavigationParams>;
+}
+
+export const ChatScreen = ({ navigation }: Props) => {
+  const handleChat = () => {
+    navigation.navigate('Chat');
+  };
+
   return (
     <Container>
       <ScrollView>
@@ -16,22 +30,7 @@ export const ChatScreen = () => {
           messageIsSend={false}
           messageUser={true}
           time={'23:59'}
-        />
-        <Chat
-          title={'Jônatas Alves'}
-          message={'Daqui a pouco'}
-          messageIsRead={false}
-          messageIsSend={true}
-          messageUser={true}
-          time={'23:59'}
-        />
-        <Chat
-          title={'Jônatas Alves'}
-          message={'Daqui a pouco'}
-          messageIsRead={false}
-          messageIsSend={false}
-          messageUser={true}
-          time={'23:59'}
+          onPress={handleChat}
         />
       </ScrollView>
       <BottomButton />

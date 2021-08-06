@@ -16,6 +16,7 @@ export function TopTabs() {
     <>
       <Header />
       <Tab.Navigator
+        initialRouteName={'Conversas'}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color }) => {
             let iconName;
