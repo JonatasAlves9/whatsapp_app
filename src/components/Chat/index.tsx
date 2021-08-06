@@ -50,7 +50,6 @@ export const Chat = ({
                 color="#999"
               />
             )}
-
             <Message>{message}</Message>
           </ViewMessage>
         </ViewCenter>
