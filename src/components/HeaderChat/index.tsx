@@ -21,7 +21,7 @@ export const HeaderChat = () => {
       </Button>
       <Avatar
         source={{
-          uri: 'https://media.gettyimages.com/photos/portrait-of-a-smiling-young-man-picture-id1040727954?s=612x612',
+          uri: 'https://avatars.githubusercontent.com/u/49556955?s=400&u=9c9e1f43d8fb1eca88c3bd81d9719d454c92f081&v=4',
         }}
       />
       <ViewName>

@@ -5,6 +5,7 @@ import { Chat } from '../../components/Chat';
 import { ScrollView } from 'react-native-gesture-handler';
 import { BottomButton } from '../../components/BottonButton';
 import { HeaderChat } from '../../components/HeaderChat';
+import { BottomInputChat } from '../../components/BottomInputChat';
 
 export const ChatScreen = () => {
   return (
@@ -16,6 +17,7 @@ export const ChatScreen = () => {
         }}
       >
         <ScrollView></ScrollView>
+        <BottomInputChat></BottomInputChat>
       </ImageBackground>
     </Container>
   );

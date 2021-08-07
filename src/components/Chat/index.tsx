@@ -36,7 +36,7 @@ export const Chat = ({
     <Container>
       <Avatar
         source={{
-          uri: 'http://s2.glbimg.com/0qzxjDYGdG3DA87NEvQtv3Xy_hqhwJt9YRvdwSPmw0pIoz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2013/08/19/oliver-peoples.jpg',
+          uri: 'https://avatars.githubusercontent.com/u/49556955?s=400&u=9c9e1f43d8fb1eca88c3bd81d9719d454c92f081&v=4',
         }}
       />
       <Button onPress={onPress}>
