@@ -1,27 +1,53 @@
 import styled from 'styled-components/native';
-import { AntDesign, Feather } from '@expo/vector-icons';
+import Constants from 'expo-constants'
+import { Ionicons, AntDesign } from '@expo/vector-icons';
 
 export const Container = styled.View`
-  height: 100px;
+  height: 80px;
   background-color: #075E55;
   padding-horizontal: 20px;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  margin-top: ${Constants.statusBarHeight}px;
 `;
 
-export const Title = styled.Text`
-  color: white;
-  font-size: 20px;
+export const Avatar = styled.Image`
+  width: 42px;
+  height: 42px;
+  border-radius: 20px;
+  margin-left: 5px;
 `;
 
-export const IconsView = styled.View`
+export const Name = styled.Text`
+  color: #FEFFFF;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: Roboto;
+  margin-bottom: 5px;
+`;
+
+export const Status = styled.Text`]
+  color: #DEFBF7;
+  font-size: 12px;
+  font-family: Roboto;
+`;
+
+export const ViewName = styled.View`
+  margin-left: 10px;
+`
+
+export const ViewIcons = styled.View`
+  right: 0;
   flex-direction: row;
+  flex: 1;
+  justify-content: flex-end;
+`
+export const Icons = styled(Ionicons)`
+  margin-left: 20px;
 `;
 
-export const IconSearch = styled(AntDesign)`
-  margin-right: 25px;
+export const IconsBack = styled(AntDesign)`
 `;
-export const IconMore = styled(Feather)``;
 
-export const ButtonIcon = styled.TouchableOpacity``;
+export const Button = styled.TouchableOpacity``;
+
