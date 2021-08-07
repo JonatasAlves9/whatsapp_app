@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, ImageBackground } from './styles';
 import { AntDesign, Feather } from '@expo/vector-icons';
 import { Chat } from '../../components/Chat';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -9,9 +9,14 @@ import { HeaderChat } from '../../components/HeaderChat';
 export const ChatScreen = () => {
   return (
     <Container>
-      <ScrollView>
-        <HeaderChat />
-      </ScrollView>
+      <HeaderChat />
+      <ImageBackground
+        source={{
+          uri: 'https://s-media-cache-ak0.pinimg.com/564x/2d/8e/fc/2d8efcae0ab119d4cd23a40fd1ba5364.jpg',
+        }}
+      >
+        <ScrollView></ScrollView>
+      </ImageBackground>
     </Container>
   );
 };
