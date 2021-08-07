@@ -30,13 +30,13 @@ export const HeaderChat = () => {
       </ViewName>
       <ViewIcons>
         <Button>
-          <Icons name="videocam" size={22} color="white" />
+          <Icons name="videocam" size={25} color="white" />
         </Button>
         <Button>
-          <Icons name={'camera'} size={22} color={'white'} />
+          <Icons name={'camera'} size={25} color={'white'} />
         </Button>
         <Button>
-          <Icons name={'ellipsis-vertical'} size={22} color={'white'} />
+          <Icons name={'ellipsis-vertical'} size={25} color={'white'} />
         </Button>
       </ViewIcons>
     </Container>

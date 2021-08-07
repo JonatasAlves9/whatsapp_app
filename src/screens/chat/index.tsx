@@ -13,7 +13,7 @@ export const ChatScreen = () => {
       <HeaderChat />
       <ImageBackground
         source={{
-          uri: 'https://s-media-cache-ak0.pinimg.com/564x/2d/8e/fc/2d8efcae0ab119d4cd23a40fd1ba5364.jpg',
+          uri: 'http://colorindonuvens.com/wp-content/uploads/2020/03/Wallpaper-PretoBranco-ColorindoNuvens-7.jpg',
         }}
       >
         <ScrollView></ScrollView>
