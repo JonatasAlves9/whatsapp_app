@@ -7,7 +7,7 @@ export const Container = styled.View`
 `;
 
 export const ViewInput = styled.View`
-  width: 83%;
+  flex: 1;
   height: 50px;
   background-color: #fff;
   border-radius: 50px;
@@ -25,13 +25,15 @@ export const Input = styled.TextInput`
 `;
 
 export const ButtonAudio = styled.TouchableOpacity`
-  flex: 1;
+  width: 50px;
+  height: 50px;
   background-color: #00887A;
-  border-radius: 200px;
+  border-radius: 500px;
   margin-right: 5px;
   margin-bottom: 5px;
   align-items: center;
   justify-content: center;
+  margin-top: 5px;
 `;
 
 export const IconCamera = styled(Ionicons)`
