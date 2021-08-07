@@ -60,9 +60,13 @@ export const DescriptionStatusUser = styled.Text`
 `;
 
 export const TitleSession = styled.Text`
-  font-size: 13px;
+  width: 100%;
+  font-size: 15px;
   font-family: Roboto;
   font-weight: bold;
+  padding-horizontal: 10px;
+  padding-vertical: 10px;
   color: #757575;
+  background-color: #EEEEEE;
 `;
 

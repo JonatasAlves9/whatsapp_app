@@ -13,6 +13,7 @@ import {
   TitleSession,
 } from './styles';
 import { Ionicons } from '@expo/vector-icons';
+import { Status } from '../../components/Status';
 
 export default function App() {
   return (
@@ -35,6 +36,11 @@ export default function App() {
           </DescriptionStatusUser>
         </ViewTextStatusUser>
       </ViewStatusUser>
+      <TitleSession>Atualizações recentes</TitleSession>
+      <Status />
+      <TitleSession>Atualizações vistas</TitleSession>
+      <Status />
+      <Status />
     </Container>
   );
 }
