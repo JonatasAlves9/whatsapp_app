@@ -3,7 +3,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import { ChatScreen } from '../screens/chats';
 import StatusScreen from '../screens/status';
-import CameraScreen from '../screens/camera';
+import { CameraScreen } from '../screens/camera';
 import CallsScreen from '../screens/calls';
 import { Header } from '../components/Header';
 

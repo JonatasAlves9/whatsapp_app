@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Container, CameraView } from './styles';
+import { AntDesign, Feather } from '@expo/vector-icons';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Camera</Text>
-    </View>
-  );
+import {
+  NavigationParams,
+  NavigationScreenProp,
+  NavigationState,
+} from 'react-navigation';
+import { Camera } from 'expo-camera';
+import { Header } from 'src/components/Header';
+
+interface Props {
+  navigation: NavigationScreenProp<NavigationState, NavigationParams>;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export const CameraScreen = ({ navigation }: Props) => {
+  const [hasPermission, setHasPermission] = useState(null);
+  const [type, setType] = useState(Camera.Constants.Type.back);
+
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestPermissionsAsync();
+      setHasPermission(status === 'granted');
+    })();
+  }, []);
+
+  return (
+    <>
+      <Container>
+        <CameraView type={type} />
+      </Container>
+    </>
+  );
+};
