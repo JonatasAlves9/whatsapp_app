@@ -1,20 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Container } from './styles';
+import { AntDesign, Feather } from '@expo/vector-icons';
+import { Chat } from '../../components/Chat';
+import { ScrollView } from 'react-native-gesture-handler';
+import { BottomButton } from '../../components/BottonButton';
+import { HeaderChat } from '../../components/HeaderChat';
+import { BottomInputChat } from '../../components/BottomInputChat';
 
-export default function App() {
+export const CallScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text>Calls</Text>
-    </View>
+    <Container>
+      <BottomButton icon={'call'} />
+    </Container>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};

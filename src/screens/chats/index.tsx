@@ -33,7 +33,7 @@ export const ChatScreen = ({ navigation }: Props) => {
           onPress={handleChat}
         />
       </ScrollView>
-      <BottomButton />
+      <BottomButton icon={'md-chatbox-ellipses'} />
     </Container>
   );
 };

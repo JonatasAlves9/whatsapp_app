@@ -14,6 +14,7 @@ import {
 } from './styles';
 import { Ionicons } from '@expo/vector-icons';
 import { Status } from '../../components/Status';
+import { BottomButton } from '../../components/BottonButton';
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
       <TitleSession>Atualizações vistas</TitleSession>
       <Status />
       <Status />
+      <BottomButton icon={'camera'} />
     </Container>
   );
 }

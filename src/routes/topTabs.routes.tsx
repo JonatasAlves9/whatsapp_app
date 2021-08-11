@@ -4,7 +4,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { ChatScreen } from '../screens/chats';
 import StatusScreen from '../screens/status';
 import { CameraScreen } from '../screens/camera';
-import CallsScreen from '../screens/calls';
+import { CallScreen } from '../screens/calls';
 import { Header } from '../components/Header';
 
 import { AntDesign, Ionicons } from '@expo/vector-icons';
@@ -58,16 +58,16 @@ export function TopTabs() {
           allowFontScaling: true,
         }}
       >
-        <Tab.Screen
+        {/* <Tab.Screen
           name="C"
           component={CameraScreen}
           options={{
             tabBarLabel: '',
           }}
-        />
+        /> */}
         <Tab.Screen name="Conversas" component={ChatScreen} />
         <Tab.Screen name="Status" component={StatusScreen} />
-        <Tab.Screen name="Chamadas" component={CallsScreen} />
+        <Tab.Screen name="Chamadas" component={CallScreen} />
       </Tab.Navigator>
     </>
   );
